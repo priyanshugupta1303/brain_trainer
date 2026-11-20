@@ -24,7 +24,14 @@ class GameLevels extends Table {
 
 @DriftDatabase(tables: [Sessions, GameLevels])
 class AppDatabase extends _$AppDatabase {
-  AppDatabase() : super(driftDatabase(name: 'brain_trainer'));
+  AppDatabase()
+      : super(driftDatabase(
+          name: 'brain_trainer',
+          web: DriftWebOptions(
+            sqlite3Wasm: Uri.parse('sqlite3.wasm'),
+            driftWorker: Uri.parse('drift_worker.js'),
+          ),
+        ));
 
   @override
   int get schemaVersion => 1;
