@@ -1,5 +1,7 @@
 # Brain Trainer
 
+priyanshugupta1303.github.io/brainer_trainer
+
 Offline, cross-platform brain-training games in Flutter. Twenty cognitive
 categories; two games implemented so far (N-Back, Schulte Table).
 
